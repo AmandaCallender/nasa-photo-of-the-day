@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
-import Loader from './components/Loader';
-import PhotoOfTheDay from './components/PhotoOfTheDay';
-import axios from 'axios';
+import Loader from "./components/Loader";
+import PhotoOfTheDay from "./components/PhotoOfTheDay";
+import axios from "axios";
 
 function App() {
   const [date, setDate] = useState();
@@ -12,7 +12,7 @@ function App() {
   const [explanation, setExplanation] = useState();
   const [copyright, setCopyright] = useState();
 
-  const apiKey = 'oiCgN7869bROOEoDXIQyJyD89JZK5QnKhde37iAq';
+  const apiKey = "oiCgN7869bROOEoDXIQyJyD89JZK5QnKhde37iAq";
   useEffect(() => {
     axios
       .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
@@ -28,10 +28,11 @@ function App() {
   // console.log(title);
   if (!url) return <Loader />;
   return (
-  <div className='App'>
-  <p>
-    {/* <Loader /> */}
-    <PhotoOfTheDay
+    <div className="App">
+      <h1>Nasa Photo of the Day</h1>
+      <p>
+        {/* <Loader /> */}
+        <PhotoOfTheDay
           date={date}
           title={title}
           url={url}
@@ -40,4 +41,7 @@ function App() {
         />
       </p>
     </div>
-};
+  );
+}
+
+export default App;

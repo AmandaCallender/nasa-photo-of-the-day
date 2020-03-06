@@ -1,6 +1,5 @@
 import React from "react";
 // import ReactDOM from 'react-dom';
-// import './PhotoOfTheDay.css';
 
 import styled from "styled-components";
 
@@ -12,7 +11,7 @@ const ImageDiv = styled.div`
   padding: 5% 5%;
   font-family: "Open Sans", sans-serif;
   background-color: #cccccc;
-  color: blac;
+  color: black;
   display: flex;
   flex-direction: column;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
